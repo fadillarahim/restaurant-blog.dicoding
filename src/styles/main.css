@@ -52,6 +52,10 @@ a{
   text-decoration: none;
   color: #1C6758;
   font-size: 20px;
+}
+
+.nav-bar .menu-bar .list-menu .nav-item a{
+  display: inline-block;
   min-width: 44px;
   min-height: 44px;
 }

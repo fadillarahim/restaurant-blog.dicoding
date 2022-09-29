@@ -70,9 +70,15 @@
 
     .nav-bar .menu-bar .list-menu li{
       list-style: none;
-      display: inline;
+      display: inline-block;
       padding: 10px;
       margin-right: 8px;
+
+    }
+
+    .nav-bar .menu-bar .list-menu a{
+      min-width: 44px;
+      min-height: 44px;
     }
 
     /*Styling For Navbar*/
