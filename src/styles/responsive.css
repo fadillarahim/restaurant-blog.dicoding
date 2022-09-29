@@ -1,26 +1,37 @@
-#favorite .list-restaurant .item{
+.list-restaurant .card-item{
   display: grid;
   grid-row-gap: 16px ;
 }
 
-@media screen and (max-width: 499px) {
+@media screen and (max-width: 633px) {
     .menu-bar {
       z-index: 10;
       background-color: #fff;
-      width: 300px;
+      width: 100%;
       position: absolute;
   
       /* This trasform moves the drawer off canvas. */
-      -webkit-transform: translate(-400px, 0);
-      transform: translate(-400px, 0);
+      -webkit-transform: translate(0, -300px);
+      transform: translate(0, -300px);
   
       /* Optionally, we animate the drawer. */
       transition: transform 0.3s ease;
     }
+
+    .menu-bar .list-menu{
+      display: list-item;
+      list-style-type: none;
+      width: 100%;
+    }
+
+    .menu-bar .list-menu li{
+      padding: 10px;
+    }
+
   
     .open {
-      -webkit-transform: translate(0, 0);
-      transform: translate(0, 0);
+      -webkit-transform: translate(0, 205px);
+      transform: translate(0, 205px);
     }
   
     .nav-item {
@@ -29,12 +40,38 @@
       width: 100%;
       text-align: left;
     }
+
+
+    .nav-bar .nav-logo{
+      margin-top: 10px;
+      cursor: pointer;
+      transition: all 0.5s ease 0s;
+      font-size: 24px;
+      color: #1C6758;
+    }
+    
   }
 
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 633px) {
     .header__menu {
       display: none;
       text-decoration: none;
+    }
+
+    .nav-bar .nav-logo{
+      margin-right: auto;
+      margin-left: 15px;
+      cursor: pointer;
+      transition: all 0.5s ease 0s;
+      font-size: 24px;
+      color: #1C6758;
+    }
+
+    .nav-bar .menu-bar .list-menu li{
+      list-style: none;
+      display: inline;
+      padding: 10px;
+      margin-right: 8px;
     }
   }
 
@@ -43,20 +80,23 @@
       margin: 0 auto;
       max-width: 650px;
     }
-  
 
-  
-    .card-item .card-title {
-      font-size: 18px;
+    .post-item__content {
+      padding: 16px 32px 32px 32px;
     }
   
-    .card-item.card-desc{
+    .post-item__title {
+      font-size: 22px;
+    }
+  
+    .post-item__description {
       font-size: 14px;
     }
+
   }
   
   @media screen and (min-width: 700px) {
-    #favorite .list-restaurant .item {
+  .list-restaurant .card-item {
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-column-gap: 10px;
@@ -72,12 +112,14 @@
   }
   
   @media screen and (min-width: 900px) {
-    #favorite .list-restaurant .item {
+    .list-restaurant .card-item {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
   
   @media screen and (min-width: 1200px) {
-
+    main{
+      max-width: 1200px;
+    }
   }

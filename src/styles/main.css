@@ -7,6 +7,25 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+/*Styling For Skip To Content*/
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px;
+  background-color: #bf1722;
+  color: white;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+a{
+  min-width: 44px;
+}
+
 /*Styling For Header*/
 .header{
   transition: min-height 0.3s;
@@ -17,6 +36,9 @@
   margin: 10px auto;
   display: block;
   width: 30px;
+  text-decoration: none;
+  color: #1C6758;
+  
 }
 
 /*Styling For Navigation Bar*/
@@ -26,15 +48,6 @@
   justify-content: center;
   align-items: center;
   transition: min-height 0.3s;
-}
-
-.nav-bar .nav-logo{
-  margin-right: auto;
-  margin-left: 15px;
-  cursor: pointer;
-  transition: all 0.5s ease 0s;
-  font-size: 24px;
-  color: #1C6758;
 }
 
 .nav-bar .nav-logo h1{
@@ -51,18 +64,10 @@
   padding: 20px;
 }
 
-.nav-bar .menu-bar .list-menu li{
-  list-style: none;
-  display: inline;
-  padding: 10px;
-  margin-right: 8px;
-}
-
 .nav-bar .menu-bar .list-menu li a{
   text-decoration: none;
   color: #1C6758;
   font-size: 20px;
-  
 }
 
 .nav-bar .menu-bar .list-menu li a:hover{
@@ -118,49 +123,76 @@
 /*Styling For List Reastaurant*/
 main{
   width: 100%;
-  margin: 60px auto;
-  text-align: center;
+  margin: 0px auto;
+
 }
 
-#favorite h2.title{
-  font-size: 30px;
-  text-align: center;
-  
+.content {
+  padding: 32px;
+
+  padding-left: 0;
 }
 
- #favorite .list-restaurant .item{
-  margin: 32px auto auto;
-  text-align: left;
-  overflow: auto;
- }
+.content .list-restaurant .card-item{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 
- #favorite .list-restaurant{
-  min-width: 80%;
-  margin: 10px auto;
- }
+  padding: 0;
+}
 
- #favorite .list-restaurant .item .card-item{
-  margin: 10px 15px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/*
+card item restorant
+*/
+.post-item {
+  float: left;
+  margin: 16px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 20rem;
- }
-
- #favorite .list-restaurant .item .card-item .card-img{
-   max-height: 150px;
- }
-
- #favorite .list-restaurant .item .card-item .card-desc{
-  text-overflow: ellipsis;
+  width: 100%;
+  border-radius: 5px;
   overflow: hidden;
-  display: -webkit-box;
-  line-height: 20px;
-  max-height: 40px;
- -webkit-line-clamp: 4; 
- }
+}
 
+.post-item__content {
+  padding: 16px 32px 32px 32px;
+}
+
+.post-item__thumbnail {
+  width: 100%;
+}
+
+.post-item_city {
+  font-size: 14px;
+  text-transform: capitalize;
+  color: #999;
+}
+
+.post-item_city .txt-rat{
+  color: red;
+}
+
+.post-item__title {
+  font-weight: 500;
+  font-size: 25px;
+  margin-top: 16px;
+  transition: 0.3s opacity;
+}
+
+.post-item__title:hover {
+  opacity: 0.5;
+}
+
+.post-item__title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-item__description {
+  margin-top: 16px;
+  font-size: 14px;
+  line-height: 1.5em;
+  text-align: left;
+}
  .ratting{
   color: #FFA500;
  }
@@ -170,10 +202,11 @@ main{
  /*Styling For Footer*/
  footer{
   margin-top: 100px;
+  box-sizing: border-box;
  }
  .container{
 	max-width: 1000px;
-	
+	overflow: hidden;
   
 }
 .row{
@@ -192,9 +225,9 @@ footer.ul{
   padding: 0px 0;
 }
 .footer-col{
-   width: 25%;
+   width: 40%;
    padding: 0 15px;
-   margin: 20px;
+   margin: 20px auto;
    text-align: center;
 }
 .footer-col h4{
@@ -239,6 +272,11 @@ footer.ul{
   position: relative;
   bottom: 0;
   color: #ffffff;
+}
+
+.footer .create-by h6{
+  width: 80%;
+  margin: 10px auto;
 }
 
 .footer .create-by .love{
