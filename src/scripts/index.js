@@ -17,11 +17,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
              src="${resto.pictureId}"
              alt="${resto.name} restaurant picture" tabindex="0">
         <div class="post-item__content">
-        <h1 class="post-item__title"><a href="#">${resto.name}</a></h1>  
+        <h1 class="post-item__title" tabindex="0">${resto.name}</h1>  
         <p class="post-item_city" tabindex="0">
           located in ${resto.city}<span class=txt-rat> with Ratting </span><span class=ratting>&#9733;</span>${resto.rating}
           </p>
           <p class="post-item__description" tabindex="0">${resto.description}</p>
+          <button class="post-item__btn_read">Read More</button>
         </div>
       </article>
         `

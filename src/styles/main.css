@@ -10,7 +10,7 @@
 /*Styling For Skip To Content*/
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -45px;
   left: 0;
   padding: 8px;
   background-color: #bf1722;
@@ -24,6 +24,7 @@
 
 a{
   min-width: 44px;
+  min-height: 44px;
 }
 
 /*Styling For Header*/
@@ -35,44 +36,32 @@ a{
   font-size: 32px;
   margin: 10px auto;
   display: block;
-  width: 30px;
+  min-width: 44px;
+  min-height: 44px;
   text-decoration: none;
-  color: #1C6758;
+  background-color: #1C6758;
+  color: #D6CDA4;
+  border-radius: 8px;
+  border: none;
+
   
 }
 
 /*Styling For Navigation Bar*/
-.nav-bar{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  transition: min-height 0.3s;
-}
-
-.nav-bar .nav-logo h1{
-  font-weight: 600;
-}
-
-.nav-bar .menu-bar{
-  padding: 20px;
-  margin: 10px;
-}
-
-.nav-bar .menu-bar .list-menu{
-  display: inline;
-  padding: 20px;
-}
-
 .nav-bar .menu-bar .list-menu li a{
   text-decoration: none;
   color: #1C6758;
   font-size: 20px;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .nav-bar .menu-bar .list-menu li a:hover{
   text-decoration: underline;
-  
+}
+
+.nav-bar .nav-logo h1{
+  font-weight: 600;
 }
 
 /*Styling For Jumbotron*/
@@ -173,7 +162,6 @@ card item restorant
 
 .post-item__title {
   font-weight: 500;
-  font-size: 25px;
   margin-top: 16px;
   transition: 0.3s opacity;
 }
@@ -185,13 +173,34 @@ card item restorant
 .post-item__title a {
   text-decoration: none;
   color: inherit;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .post-item__description {
   margin-top: 16px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5em;
-  text-align: left;
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post-item__btn_read{
+  padding: 7px;
+  border-radius: 8px;
+  background-color: #1C6758;
+  color: #D6CDA4;
+  border: 2px solid #1C6758;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.post-item__btn_read:hover{
+  background-color: transparent;
+  color: #1C6758;
 }
  .ratting{
   color: #FFA500;
@@ -250,8 +259,8 @@ footer.ul{
 
 .footer-col .social-links a{
 	display: inline-block;
-	height: 40px;
-	width: 40px;
+	min-height: 44px;
+	min-width: 44px;
 	background-color: rgba(255,255,255,0.2);
 	margin:0 10px 10px 0;
 	text-align: center;
